@@ -1,0 +1,13 @@
+name: email
+
+on: [pull_request, issues]
+
+jobs:
+  email:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.68cef1643572548c4c3d5cf6a11b4bf1f8fede14}}
+        issue-message: 'Message that will be displayed on users'' first issue'
+        pr-message: 'Message that will be displayed on users'' first pr'
